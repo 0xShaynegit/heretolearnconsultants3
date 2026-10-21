@@ -1,14 +1,14 @@
 {
-  "title": "Industrial (High-End)",
+  "title": "Here to Learn Consultants",
   "stack": [
     "HTML",
     "CSS",
     "JS"
   ],
-  "status": "not-used",
-  "baseTemplate": null,
-  "features": [],
-  "audience": null,
+  "status": "in-progress",
+  "baseTemplate": "industrial-high-end",
+  "features": ["stage-selector", "mailto-form", "animated-school-plan"],
+  "audience": "School owners, boards and principals across Asia",
   "dependencies": [],
-  "notes": "Kit-catalogue high-end sample. Componentized industrial-style build."
+  "notes": "Education consultancy network. Contact details, photos and team are placeholders pending owner, see docs/questions-for-owner.md."
 }

@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meridian Lending Co. | Structured Mortgage Broking, Australia</title>
-<meta name="description" content="Meridian Lending Co. is an Australian mortgage broker engineered for precision. Home loans, refinancing, investment lending and first home buyer support across 40+ lenders.">
-<meta property="og:title" content="Meridian Lending Co. | Structured Mortgage Broking">
-<meta property="og:description" content="Precision-engineered home loan broking. 40+ lenders. One structured process.">
+<meta name="color-scheme" content="light dark">
+<title>Here to Learn Consultants | Education Consultants for Schools Across Asia</title>
+<meta name="description" content="A network of experienced teachers and school leaders supporting schools across Asia with school start-up, policy and curriculum, leadership coaching, people management, school improvement and strategic growth. Online and in person.">
+<meta property="og:title" content="Here to Learn Consultants | Education Consultants Across Asia">
+<meta property="og:description" content="Experienced teachers and school leaders helping schools open, improve and grow. Advice, coaching, consultancy and training, online and in person.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://meridianlending.example.au/">
-<meta property="og:image" content="https://meridianlending.example.au/images/og-cover.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Meridian Lending Co. | Structured Mortgage Broking">
-<meta name="twitter:description" content="Precision-engineered home loan broking. 40+ lenders. One structured process.">
-<link rel="canonical" href="https://meridianlending.example.au/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "name": "Meridian Lending Co.",
-  "description": "Australian mortgage broker offering home loans, refinancing and investment lending across 40+ lenders.",
-  "areaServed": "AU",
-  "url": "https://meridianlending.example.au/",
-  "telephone": "+61-2-0000-0000",
-  "priceRange": "Free consultation"
+  "@type": "ProfessionalService",
+  "name": "Here to Learn Consultants",
+  "description": "A network of educational consultants supporting schools across the Asia region with school start-up, policy and curriculum development, leadership coaching and people management, school improvement and strategic growth.",
+  "areaServed": "Asia",
+  "knowsAbout": ["School start-up", "Policy development", "Curriculum development", "Leadership coaching", "People management", "School improvement", "Strategic growth"]
 }
 </script>
+<script>document.documentElement.classList.add("js");</script>
+<link rel="preload" href="fonts/archivo/Archivo-Black.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -38,21 +34,23 @@
 <!-- ======================= HEADER ======================= -->
 <header class="site-header" id="siteHeader">
   <div class="header-grid">
-    <a class="brand" href="#top" aria-label="Meridian Lending Co. home">
+    <a class="brand" href="#top" aria-label="Here to Learn Consultants home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="32" height="32"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 24V10l8 8 8-8v14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <svg viewBox="0 0 32 32" width="32" height="32"><rect x="1" y="1" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 25h6v-6h6v-6h6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="25" cy="8" r="2.5" fill="currentColor"/></svg>
       </span>
-      <span class="brand-text">MERIDIAN<em>LENDING CO.</em></span>
+      <span class="brand-text">HERE TO LEARN<em>CONSULTANTS</em></span>
     </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="#services"><span class="nav-index">01</span>Services</a>
-      <a href="#process"><span class="nav-index">02</span>Process</a>
-      <a href="#calculator"><span class="nav-index">03</span>Calculator</a>
-      <a href="#lenders"><span class="nav-index">04</span>Lenders</a>
+      <a href="#process"><span class="nav-index">02</span>Approach</a>
+      <a href="#stage"><span class="nav-index">03</span>Your School</a>
+      <a href="#network"><span class="nav-index">04</span>Network</a>
       <a href="#faq"><span class="nav-index">05</span>FAQ</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-line" href="#contact"><span class="btn-plus" aria-hidden="true">+</span>Book Assessment</a>
+      <!-- TODO owner: real phone number, see docs/questions-for-owner.md -->
+      <a class="header-phone" href="tel:+00000000000">+00 000 000 0000</a>
+      <a class="btn btn-solid" href="#contact"><span class="btn-plus" aria-hidden="true">+</span>Book a Consultation</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -65,62 +63,80 @@
 <!-- ======================= HERO ======================= -->
 <section class="hero">
   <div class="hero-gridlines" aria-hidden="true"></div>
-  <div class="blueprint-house" aria-hidden="true">
-    <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+  <div class="blueprint-school" aria-hidden="true">
+    <svg viewBox="0 0 480 400" preserveAspectRatio="xMidYMid meet" id="schoolPlan">
       <g class="bp-lines" fill="none" stroke-width="1.5">
-        <path class="bp" d="M60 340 H340"/>
-        <path class="bp" d="M80 340 V180 L200 80 L320 180 V340"/>
-        <path class="bp" d="M80 180 H320"/>
-        <path class="bp" d="M150 340 V250 H250 V340"/>
-        <path class="bp" d="M200 250 V340"/>
-        <path class="bp" d="M110 210 H170 V270 H110 Z"/>
-        <path class="bp" d="M140 210 V270 M110 240 H170"/>
-        <path class="bp" d="M230 210 H290 V240 H230 Z"/>
-        <path class="bp" d="M200 80 V50 M185 50 H215"/>
-        <circle class="bp" cx="200" cy="155" r="18"/>
-        <path class="bp" d="M200 137 V173 M182 155 H218"/>
-        <path class="bp bp-dim" d="M60 360 H340 M60 355 V365 M340 355 V365"/>
-        <path class="bp bp-dim" d="M45 340 V80 M40 340 H50 M40 80 H50"/>
+        <path class="bp" d="M40 40 H440 V360 H40 Z"/>
+        <path class="bp" d="M40 140 H160 M40 250 H160 M160 40 V360"/>
+        <path class="bp" d="M320 40 V360 M320 140 H440 M320 250 H440"/>
+        <path class="bp" d="M160 110 H320 M160 290 H320"/>
+        <path class="bp" d="M220 40 V110 M260 290 V360"/>
+        <path class="bp" d="M100 140 v-14 M100 250 v14 M380 140 v-14 M380 250 v14"/>
+        <path class="bp" d="M215 360 h50"/>
+        <path class="bp bp-dim" d="M40 380 H440 M40 375 V385 M440 375 V385"/>
+        <path class="bp bp-dim" d="M20 40 V360 M15 40 H25 M15 360 H25"/>
+      </g>
+      <g class="bp-tree">
+        <circle class="tree-canopy" cx="240" cy="200" r="46"/>
+        <circle class="tree-canopy tree-inner" cx="226" cy="190" r="22"/>
+        <circle class="tree-canopy tree-inner" cx="258" cy="212" r="18"/>
+        <circle class="tree-trunk" cx="240" cy="200" r="4"/>
       </g>
       <g class="bp-labels">
-        <text x="200" y="378">18.4 M</text>
-        <text x="30" y="210" transform="rotate(-90 30 210)">9.6 M</text>
+        <text x="100" y="94">CLASS 1</text>
+        <text x="100" y="200">CLASS 2</text>
+        <text x="100" y="310">CLASS 3</text>
+        <text x="380" y="94">LIBRARY</text>
+        <text x="380" y="200">STAFF</text>
+        <text x="380" y="310">HALL</text>
+        <text x="190" y="80">OFFICE</text>
+        <text x="290" y="80">LAB</text>
+        <text x="240" y="270">COURTYARD</text>
+        <text x="240" y="398">ONE SCHOOL / MANY LEARNERS</text>
+      </g>
+      <g class="bp-people">
+        <circle r="3.5"><animateMotion dur="14s" repeatCount="indefinite" path="M240 350 V300 H170 V125 H210 V100"/></circle>
+        <circle r="3.5" class="p-sun"><animateMotion dur="18s" begin="-6s" repeatCount="indefinite" path="M170 300 H310 V125 H170 Z"/></circle>
+        <circle r="3.5"><animateMotion dur="11s" begin="-3s" repeatCount="indefinite" path="M310 200 H335 M335 200 H310"/></circle>
+        <circle r="3.5" class="p-sun"><animateMotion dur="16s" begin="-9s" repeatCount="indefinite" path="M240 350 V300 H310 V125 H280 V100"/></circle>
       </g>
     </svg>
   </div>
   <div class="hero-inner">
-    <p class="kicker reveal"><span class="kicker-rule"></span>AUSTRALIAN MORTGAGE BROKING / EST. 2011</p>
+    <p class="kicker reveal"><span class="kicker-rule"></span>EDUCATION CONSULTANTS / ACROSS ASIA</p>
     <h1 class="hero-title">
-      <span class="line reveal">HOME LOANS,</span>
-      <span class="line reveal delay-1">ENGINEERED WITH</span>
-      <span class="line reveal delay-2 accent-steel">PRECISION.</span>
+      <span class="line reveal">SCHOOLS THAT</span>
+      <span class="line reveal delay-1">WORK. LEADERS</span>
+      <span class="line reveal delay-2 accent-sun">WHO GROW.</span>
     </h1>
-    <p class="hero-sub reveal delay-3">We compare 40+ Australian lenders, structure your application like a build spec, and negotiate the rate. You get the keys. No broker fees. Ever.</p>
+    <p class="hero-sub reveal delay-3">We are a network of teachers and school leaders who have done the job. We help you open, shape and strengthen your school, online or in person, wherever you are in Asia.</p>
     <div class="hero-actions reveal delay-4">
-      <a class="btn btn-solid" href="#calculator"><span class="btn-plus" aria-hidden="true">+</span>Run The Numbers</a>
-      <a class="btn btn-line" href="#process">View Our Process</a>
-    </div>
-    <div class="hero-stats reveal delay-5">
-      <div class="stat">
-        <span class="stat-num" data-count="2400" data-suffix="+">0</span>
-        <span class="stat-label">LOANS SETTLED</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-count="40" data-suffix="+">0</span>
-        <span class="stat-label">LENDER PANEL</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-count="1.2" data-decimals="1" data-prefix="$" data-suffix="B">0</span>
-        <span class="stat-label">SETTLED VOLUME</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-count="4.9" data-decimals="1">0</span>
-        <span class="stat-label">GOOGLE RATING</span>
-      </div>
+      <a class="btn btn-sun" href="#contact"><span class="btn-plus" aria-hidden="true">+</span>Book a Consultation</a>
+      <a class="btn btn-line" href="#process">How We Work</a>
     </div>
   </div>
   <div class="hero-baseline" aria-hidden="true">
-    <span>DRG. NO. ML-2026-001</span><span>SCALE 1:1</span><span>SHEET 01 OF 01</span><span>REV. C</span>
+    <span>PLAN NO. HTL-01</span><span>START-UP / POLICY / LEADERSHIP / IMPROVEMENT / GROWTH</span><span>SHEET 01</span>
+  </div>
+</section>
+
+<!-- ======================= TRUST BAR ======================= -->
+<section class="trust-bar" aria-label="At a glance">
+  <div class="stat">
+    <span class="stat-num" data-count="5">5</span>
+    <span class="stat-label">AREAS OF EXPERTISE</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num" data-count="4">4</span>
+    <span class="stat-label">WAYS TO WORK WITH US</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num stat-word">ONLINE + ON SITE</span>
+    <span class="stat-label">DELIVERY</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num stat-word">ASIA</span>
+    <span class="stat-label">REGION WE SERVE</span>
   </div>
 </section>
 
@@ -128,45 +144,45 @@
 <section class="section" id="services">
   <div class="section-head reveal">
     <span class="section-index">01</span>
-    <h2>LENDING SERVICES</h2>
-    <p class="section-note">Every loan type, one structured methodology.</p>
+    <h2>WHAT WE DO</h2>
+    <p class="section-note">Five areas. Practitioners in every one.</p>
   </div>
   <div class="service-grid">
     <article class="panel reveal">
-      <div class="panel-top"><span class="panel-code">SVC-A</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>First Home Buyers</h3>
-      <p>Deposit strategy, government scheme eligibility (FHBG, FHSS, stamp duty concessions) and a clear path from pre-approval to settlement.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+      <div class="panel-top"><span class="panel-code">01 / START-UP</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>School Start-Up</h3>
+      <p>From the first feasibility conversation to opening day. Vision and ethos, staffing structures, timetables, admissions and the policies a new school needs before its first student arrives.</p>
+      <a class="panel-link" href="#contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
     </article>
     <article class="panel reveal delay-1">
-      <div class="panel-top"><span class="panel-code">SVC-B</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>Refinancing</h3>
-      <p>Rate review across the full panel, cashback comparison, and break-cost analysis. Most clients save within the first statement cycle.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+      <div class="panel-top"><span class="panel-code">02 / POLICY</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>Policy and Curriculum</h3>
+      <p>Curriculum frameworks, assessment and the written policies that hold a school together, shaped to your context, your regulators and your community.</p>
+      <a class="panel-link" href="#contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
     </article>
     <article class="panel reveal delay-2">
-      <div class="panel-top"><span class="panel-code">SVC-C</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>Investment Lending</h3>
-      <p>Portfolio structuring, interest-only strategy, trust and company lending, and serviceability modelling for the next purchase, not just this one.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+      <div class="panel-top"><span class="panel-code">03 / LEADERSHIP</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>Leadership Coaching and People Management</h3>
+      <p>Coaching for principals, middle leaders and those stepping up. Recruitment, induction, appraisal and the hard conversations, from people who have led schools themselves.</p>
+      <a class="panel-link" href="#contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
     </article>
     <article class="panel reveal delay-3">
-      <div class="panel-top"><span class="panel-code">SVC-D</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>Construction Loans</h3>
-      <p>Progress payment scheduling, fixed-price contract review and land-plus-build packaging for new builds and knockdown rebuilds.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+      <div class="panel-top"><span class="panel-code">04 / IMPROVEMENT</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>School Improvement</h3>
+      <p>An honest look at teaching, learning and leadership, then a practical plan your staff can own. We stay alongside you while it takes hold.</p>
+      <a class="panel-link" href="#contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
     </article>
     <article class="panel reveal delay-4">
-      <div class="panel-top"><span class="panel-code">SVC-E</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>Self-Employed Loans</h3>
-      <p>Low-doc and alt-doc pathways, add-back calculations and lenders who read business financials the way an accountant does.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+      <div class="panel-top"><span class="panel-code">05 / GROWTH</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>Strategic Growth</h3>
+      <p>New phases, a second campus, rising enrolment. Growth planned so that it protects the culture that made your school worth choosing.</p>
+      <a class="panel-link" href="#contact">Talk to us <span aria-hidden="true">&#8594;</span></a>
     </article>
-    <article class="panel reveal delay-5">
-      <div class="panel-top"><span class="panel-code">SVC-F</span><span class="panel-plus" aria-hidden="true">+</span></div>
-      <h3>SMSF Lending</h3>
-      <p>Limited recourse borrowing arrangements for residential and commercial property inside your self-managed super fund.</p>
-      <a class="panel-link" href="#contact">Specification <span aria-hidden="true">&#8594;</span></a>
+    <article class="panel panel-invert reveal delay-5">
+      <div class="panel-top"><span class="panel-code">NOT SURE?</span><span class="panel-plus" aria-hidden="true">+</span></div>
+      <h3>Start with where your school is today.</h3>
+      <p>Opening, establishing, improving or growing. Pick your stage and see where we usually help first.</p>
+      <a class="panel-link" href="#stage">Find your stage <span aria-hidden="true">&#8594;</span></a>
     </article>
   </div>
 </section>
@@ -175,8 +191,8 @@
 <section class="section section-dark" id="process">
   <div class="section-head reveal">
     <span class="section-index">02</span>
-    <h2>THE ASSEMBLY LINE</h2>
-    <p class="section-note">Four stages. Fixed sequence. No surprises.</p>
+    <h2>HOW WE WORK</h2>
+    <p class="section-note">Four stages, built around your school.</p>
   </div>
   <div class="process-track">
     <div class="process-progress" id="processProgress" aria-hidden="true"></div>
@@ -184,129 +200,107 @@
       <li class="process-step reveal">
         <span class="step-node" aria-hidden="true"></span>
         <span class="step-num">STAGE 01</span>
-        <h3>Assessment</h3>
-        <p>45-minute discovery. Income, liabilities, goals. We map your borrowing capacity across the panel, not one lender's calculator.</p>
-        <span class="step-duration">DAY 0</span>
+        <h3>Listen</h3>
+        <p>We start with conversations: leaders, staff and, where it helps, students and parents. What is working, what is not, and what you want to be true next year.</p>
+        <span class="step-duration">CONVERSATIONS</span>
       </li>
       <li class="process-step reveal delay-1">
         <span class="step-node" aria-hidden="true"></span>
         <span class="step-num">STAGE 02</span>
-        <h3>Structuring</h3>
-        <p>Loan architecture: fixed/variable split, offset configuration, ownership structure. Documented in a written recommendation.</p>
-        <span class="step-duration">DAY 2-4</span>
+        <h3>Understand</h3>
+        <p>We look at the evidence with the people closest to it, in classrooms and in documents, and agree together what matters most.</p>
+        <span class="step-duration">EVIDENCE</span>
       </li>
       <li class="process-step reveal delay-2">
         <span class="step-node" aria-hidden="true"></span>
         <span class="step-num">STAGE 03</span>
-        <h3>Submission</h3>
-        <p>Application packaged to lender credit policy the first time. We track it daily and escalate when assessors stall.</p>
-        <span class="step-duration">DAY 5-14</span>
+        <h3>Plan</h3>
+        <p>A clear written plan with owners, timelines and a shared picture of what success looks like. Short enough that people actually use it.</p>
+        <span class="step-duration">WRITTEN PLAN</span>
       </li>
       <li class="process-step reveal delay-3">
         <span class="step-node" aria-hidden="true"></span>
         <span class="step-num">STAGE 04</span>
-        <h3>Settlement</h3>
-        <p>Documents certified, funds booked, settlement confirmed. Then an annual rate review, for the life of the loan, at no cost.</p>
-        <span class="step-duration">DAY 21-35</span>
+        <h3>Support</h3>
+        <p>Coaching, training and regular check-ins while the plan becomes everyday practice. Online, on site, or a mix of both.</p>
+        <span class="step-duration">ONLINE OR ON SITE</span>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ======================= CALCULATOR ======================= -->
-<section class="section" id="calculator">
+<!-- ======================= QUOTE BAND ======================= -->
+<section class="quote-band">
+  <p class="quote-band-text reveal">Between us we have spent many years in the classroom and in the principal&rsquo;s office. <em>We know what a Monday morning feels like.</em></p>
+</section>
+
+<!-- ======================= STAGE SELECTOR ======================= -->
+<section class="section" id="stage">
   <div class="section-head reveal">
     <span class="section-index">03</span>
-    <h2>REPAYMENT CALCULATOR</h2>
-    <p class="section-note">Live output. Adjust the inputs, read the dial.</p>
+    <h2>WHERE IS YOUR SCHOOL?</h2>
+    <p class="section-note">Choose a stage. See where we usually start.</p>
   </div>
   <div class="calc-grid reveal">
     <div class="calc-controls">
-      <div class="calc-field">
-        <div class="calc-label-row"><label for="loanAmount">LOAN AMOUNT</label><output id="loanAmountOut">$650,000</output></div>
-        <input type="range" id="loanAmount" min="100000" max="2000000" step="10000" value="650000">
-        <div class="calc-scale"><span>$100K</span><span>$2M</span></div>
-      </div>
-      <div class="calc-field">
-        <div class="calc-label-row"><label for="interestRate">INTEREST RATE (P.A.)</label><output id="interestRateOut">5.89%</output></div>
-        <input type="range" id="interestRate" min="4.5" max="9" step="0.01" value="5.89">
-        <div class="calc-scale"><span>4.50%</span><span>9.00%</span></div>
-      </div>
-      <div class="calc-field">
-        <div class="calc-label-row"><label for="loanTerm">LOAN TERM</label><output id="loanTermOut">30 YRS</output></div>
-        <input type="range" id="loanTerm" min="5" max="30" step="1" value="30">
-        <div class="calc-scale"><span>5 YRS</span><span>30 YRS</span></div>
-      </div>
-      <div class="calc-field calc-toggle-field">
-        <span class="calc-label-solo">REPAYMENT FREQUENCY</span>
-        <div class="freq-toggle" role="group" aria-label="Repayment frequency">
-          <button type="button" class="freq-btn" data-freq="52">WEEKLY</button>
-          <button type="button" class="freq-btn" data-freq="26">FORTNIGHTLY</button>
-          <button type="button" class="freq-btn is-active" data-freq="12">MONTHLY</button>
-        </div>
+      <span class="calc-label-solo" id="stageLabel">YOUR SCHOOL IS</span>
+      <div class="stage-list" role="group" aria-labelledby="stageLabel">
+        <button type="button" class="stage-btn is-active" data-stage="0" aria-pressed="true"><span>01</span>Opening</button>
+        <button type="button" class="stage-btn" data-stage="1" aria-pressed="false"><span>02</span>Establishing</button>
+        <button type="button" class="stage-btn" data-stage="2" aria-pressed="false"><span>03</span>Improving</button>
+        <button type="button" class="stage-btn" data-stage="3" aria-pressed="false"><span>04</span>Growing</button>
       </div>
     </div>
-    <div class="calc-output">
-      <div class="gauge-wrap">
-        <svg class="gauge" viewBox="0 0 220 130" aria-hidden="true">
-          <path class="gauge-track" d="M20 115 A 95 95 0 0 1 200 115" fill="none"/>
-          <g class="gauge-ticks" id="gaugeTicks"></g>
-          <path class="gauge-fill" id="gaugeFill" d="M20 115 A 95 95 0 0 1 200 115" fill="none"/>
-          <line class="gauge-needle" id="gaugeNeedle" x1="110" y1="115" x2="110" y2="34"/>
-          <circle class="gauge-hub" cx="110" cy="115" r="6"/>
-        </svg>
-        <div class="gauge-readout">
-          <span class="gauge-label" id="repayLabel">MONTHLY REPAYMENT</span>
-          <span class="gauge-value" id="repayValue">$0</span>
-        </div>
+    <div class="calc-output" aria-live="polite">
+      <span class="stage-big" id="stageNum">01</span>
+      <h3 class="stage-title" id="stageTitle">Planning a new school</h3>
+      <p class="stage-text" id="stageText">You have a vision and perhaps a site. You need structures, policies, a curriculum and the right people in place before the doors open.</p>
+      <div class="calc-meta">
+        <span class="gauge-label">WHERE WE USUALLY HELP FIRST</span>
+        <ul class="stage-services" id="stageServices">
+          <li>School start-up</li>
+          <li>Policy and curriculum</li>
+          <li>People management</li>
+        </ul>
       </div>
-      <dl class="calc-meta">
-        <div><dt>TOTAL INTEREST</dt><dd id="totalInterest">$0</dd></div>
-        <div><dt>TOTAL REPAID</dt><dd id="totalRepaid">$0</dd></div>
-      </dl>
-      <p class="calc-disclaimer">Indicative only. Principal and interest repayments. Excludes fees. Full comparison provided at assessment.</p>
-      <a class="btn btn-solid btn-wide" href="#contact"><span class="btn-plus" aria-hidden="true">+</span>Get An Exact Quote</a>
+      <a class="btn btn-solid btn-wide" href="#contact"><span class="btn-plus" aria-hidden="true">+</span>Talk About Your School</a>
     </div>
   </div>
 </section>
 
-<!-- ======================= LENDERS ======================= -->
-<section class="section section-dark" id="lenders">
+<!-- ======================= NETWORK ======================= -->
+<section class="section section-dark" id="network">
   <div class="section-head reveal">
     <span class="section-index">04</span>
-    <h2>THE LENDER PANEL</h2>
-    <p class="section-note">40+ banks and non-bank lenders, one comparison.</p>
+    <h2>THE NETWORK</h2>
+    <p class="section-note">Teachers and school leaders, across Asia.</p>
   </div>
   <div class="lender-marquee" aria-hidden="true">
     <div class="marquee-row" id="marqueeRow1"></div>
     <div class="marquee-row marquee-reverse" id="marqueeRow2"></div>
   </div>
   <div class="lender-note reveal">
-    <p>Big four, regionals, mutuals, and specialist non-banks. When 40+ lenders compete on your file, the rate finds its floor.</p>
+    <p>We are not a call centre with a slide deck. Every engagement is led by consultants who have taught, led and built schools, chosen for the experience that fits yours.</p>
   </div>
 </section>
 
-<!-- ======================= TESTIMONIAL / TRUST ======================= -->
-<section class="section" id="trust">
+<!-- ======================= WAYS TO WORK ======================= -->
+<section class="section" id="ways">
   <div class="trust-grid">
-    <figure class="quote-panel reveal">
+    <div class="quote-panel reveal">
       <div class="quote-mark" aria-hidden="true">&#8220;</div>
-      <blockquote id="quoteText">Meridian restructured our two loans into one split facility and cut our rate by 0.74%. The written recommendation read like an engineering report. We knew exactly why every decision was made.</blockquote>
-      <figcaption id="quoteAuthor">R. &amp; K. THOMPSON / REFINANCE / BRISBANE QLD</figcaption>
-      <div class="quote-nav">
-        <button type="button" class="quote-btn" id="quotePrev" aria-label="Previous testimonial">&#8592;</button>
-        <span class="quote-counter" id="quoteCounter">01 / 03</span>
-        <button type="button" class="quote-btn" id="quoteNext" aria-label="Next testimonial">&#8594;</button>
-      </div>
-    </figure>
+      <p class="ways-lead">Advice when you need a second opinion. A partner when you need more than that.</p>
+      <p class="ways-sub">Every school starts somewhere different, so we shape the work around you. One call, a term of coaching, a staff training day or a full consultancy project.</p>
+      <a class="btn btn-line" href="#contact">Start a Conversation</a>
+    </div>
     <div class="cred-panel reveal delay-1">
-      <h3 class="cred-title">COMPLIANCE SPEC</h3>
+      <h3 class="cred-title">FOUR WAYS TO WORK WITH US</h3>
       <ul class="cred-list">
-        <li><span>ACL</span>Australian Credit Licence 000000</li>
-        <li><span>MFAA</span>Full Member, Mortgage &amp; Finance Association of Australia</li>
-        <li><span>AFCA</span>Member, Australian Financial Complaints Authority</li>
-        <li><span>BID</span>Best Interests Duty compliant under NCCP Act</li>
-        <li><span>FEE</span>$0 to you. Paid by the lender on settlement.</li>
+        <li><span>ADV</span><div><b>Advice</b>Focused sessions on a specific question, decision or document.</div></li>
+        <li><span>COA</span><div><b>Coaching</b>Ongoing one-to-one or team coaching for school leaders.</div></li>
+        <li><span>CON</span><div><b>Consultancy</b>Projects from start-up planning to whole-school improvement.</div></li>
+        <li><span>TRN</span><div><b>Training</b>Professional learning for staff, designed around your goals.</div></li>
+        <li><span>WHERE</span><div><b>Online and in person</b>Wherever your school is in the Asia region.</div></li>
       </ul>
     </div>
   </div>
@@ -317,23 +311,34 @@
   <div class="contact-grid">
     <div class="contact-copy reveal">
       <span class="section-index">05</span>
-      <h2>BOOK YOUR<br>ASSESSMENT.</h2>
-      <p>45 minutes. Phone or video. You leave with your borrowing capacity, an indicative rate, and a written next-steps plan. No cost, no obligation, no lock-in.</p>
+      <h2>TELL US ABOUT<br>YOUR SCHOOL.</h2>
+      <p>A first conversation is about listening. Tell us where your school is and what you want to change, and we will suggest how we could help.</p>
       <div class="contact-details">
-        <div><span>PHONE</span><a href="tel:+61200000000">02 0000 0000</a></div>
-        <div><span>EMAIL</span><a href="mailto:assess@meridianlending.example.au">assess@meridianlending.example.au</a></div>
-        <div><span>HOURS</span>MON-FRI 0830-1800 AEST</div>
+        <!-- TODO owner: real email and phone, see docs/questions-for-owner.md -->
+        <div><span>EMAIL</span><a href="mailto:hello@heretolearn.example" id="contactEmail">hello@heretolearn.example</a></div>
+        <div><span>PHONE</span><a href="tel:+00000000000">+00 000 000 0000</a></div>
+        <div><span>WHERE</span>Online, and in person across Asia</div>
       </div>
     </div>
     <form class="contact-form reveal delay-1" id="contactForm" novalidate>
       <div class="form-row">
         <div class="form-field">
-          <label for="fName">FULL NAME</label>
+          <label for="fName">YOUR NAME</label>
           <input type="text" id="fName" name="name" autocomplete="name" required>
         </div>
         <div class="form-field">
-          <label for="fPhone">PHONE</label>
-          <input type="tel" id="fPhone" name="phone" autocomplete="tel" required>
+          <label for="fRole">YOUR ROLE</label>
+          <input type="text" id="fRole" name="role" autocomplete="organization-title">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fSchool">SCHOOL</label>
+          <input type="text" id="fSchool" name="school" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="fCountry">COUNTRY</label>
+          <input type="text" id="fCountry" name="country" autocomplete="country-name">
         </div>
       </div>
       <div class="form-field">
@@ -341,17 +346,21 @@
         <input type="email" id="fEmail" name="email" autocomplete="email" required>
       </div>
       <div class="form-field">
-        <label for="fGoal">LENDING GOAL</label>
+        <label for="fGoal">I AM INTERESTED IN</label>
         <select id="fGoal" name="goal">
-          <option>First home purchase</option>
-          <option>Refinance existing loan</option>
-          <option>Investment property</option>
-          <option>Construction / new build</option>
-          <option>Self-employed lending</option>
-          <option>SMSF lending</option>
+          <option>School start-up</option>
+          <option>Policy and curriculum</option>
+          <option>Leadership coaching and people management</option>
+          <option>School improvement</option>
+          <option>Strategic growth</option>
+          <option>Not sure yet</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-solid btn-wide"><span class="btn-plus" aria-hidden="true">+</span>Request Callback</button>
+      <div class="form-field">
+        <label for="fMsg">A LITTLE ABOUT YOUR SCHOOL</label>
+        <textarea id="fMsg" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-sun btn-wide"><span class="btn-plus" aria-hidden="true">+</span>Send Message</button>
       <p class="form-status" id="formStatus" role="status"></p>
     </form>
   </div>
@@ -361,29 +370,29 @@
 <section class="section" id="faq">
   <div class="section-head reveal">
     <span class="section-index">06</span>
-    <h2>TECHNICAL FAQ</h2>
-    <p class="section-note">Straight answers, no fine print theatre.</p>
+    <h2>QUESTIONS</h2>
+    <p class="section-note">What schools usually ask first.</p>
   </div>
   <div class="faq-list reveal">
     <details class="faq-item">
-      <summary><span class="faq-code">Q-01</span>What does a mortgage broker cost me?<span class="faq-plus" aria-hidden="true">+</span></summary>
-      <div class="faq-body"><p>Nothing. Brokers are paid a commission by the lender on settlement. Under the Best Interests Duty we are legally required to act in your interests, not the lender's, and our recommendation document discloses every commission.</p></div>
+      <summary><span class="faq-code">Q-01</span>Do you work online or in person?<span class="faq-plus" aria-hidden="true">+</span></summary>
+      <div class="faq-body"><p>Both. Coaching and advice often work well online. Reviews, training days and start-up planning usually benefit from time on site. Many schools use a mix.</p></div>
     </details>
     <details class="faq-item">
-      <summary><span class="faq-code">Q-02</span>How much deposit do I actually need?<span class="faq-plus" aria-hidden="true">+</span></summary>
-      <div class="faq-body"><p>As little as 5% with the First Home Guarantee, or 2% for eligible single parents. Outside the schemes, anything under 20% typically attracts Lenders Mortgage Insurance, which we model into the comparison so you can see the true cost.</p></div>
+      <summary><span class="faq-code">Q-02</span>Where do you work?<span class="faq-plus" aria-hidden="true">+</span></summary>
+      <div class="faq-body"><p>We support schools across the Asia region. Tell us where you are and we will tell you how we can work with you there.</p></div>
     </details>
     <details class="faq-item">
-      <summary><span class="faq-code">Q-03</span>Will shopping around damage my credit score?<span class="faq-plus" aria-hidden="true">+</span></summary>
-      <div class="faq-body"><p>Multiple direct applications will. Our comparison work happens off-file: we assess policy fit across the panel first, then lodge one application with the right lender. One enquiry, not six.</p></div>
+      <summary><span class="faq-code">Q-03</span>Can you help before our school has opened?<span class="faq-plus" aria-hidden="true">+</span></summary>
+      <div class="faq-body"><p>Yes. School start-up is one of our core areas: vision, structures, policies, curriculum and staffing, planned before the first student arrives.</p></div>
     </details>
     <details class="faq-item">
-      <summary><span class="faq-code">Q-04</span>Fixed or variable in the current market?<span class="faq-plus" aria-hidden="true">+</span></summary>
-      <div class="faq-body"><p>Usually neither on its own. Split facilities let you fix a portion for certainty and keep a variable portion with an offset. The right ratio depends on your cash buffer and how long you will hold the property. We model both.</p></div>
+      <summary><span class="faq-code">Q-04</span>Who will we actually work with?<span class="faq-plus" aria-hidden="true">+</span></summary>
+      <div class="faq-body"><p>Consultants from our network with classroom and school leadership experience in the area you need. We introduce them before any work begins.</p></div>
     </details>
     <details class="faq-item">
-      <summary><span class="faq-code">Q-05</span>How long does approval take?<span class="faq-plus" aria-hidden="true">+</span></summary>
-      <div class="faq-body"><p>Pre-approval in 2 to 10 business days depending on lender queue. Full approval to settlement typically runs 21 to 35 days. We publish current lender turnaround times to every client weekly.</p></div>
+      <summary><span class="faq-code">Q-05</span>How much does it cost?<span class="faq-plus" aria-hidden="true">+</span></summary>
+      <div class="faq-body"><p>It depends on what you need, from a single advice session to a full project. We quote once we understand your school, so the first step is a conversation.</p></div>
     </details>
   </div>
 </section>
@@ -394,34 +403,34 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col footer-brand">
-      <span class="brand-text">MERIDIAN<em>LENDING CO.</em></span>
-      <p>Structured mortgage broking for Australians who read the spec sheet.</p>
+      <span class="brand-text">HERE TO LEARN<em>CONSULTANTS</em></span>
+      <p>Experienced teachers and school leaders, supporting schools across Asia.</p>
     </div>
     <div class="footer-col">
       <h4>SERVICES</h4>
-      <a href="#services">First Home Buyers</a>
-      <a href="#services">Refinancing</a>
-      <a href="#services">Investment Lending</a>
-      <a href="#services">Construction Loans</a>
+      <a href="#services">School Start-Up</a>
+      <a href="#services">Policy and Curriculum</a>
+      <a href="#services">Leadership Coaching</a>
+      <a href="#services">School Improvement</a>
+      <a href="#services">Strategic Growth</a>
     </div>
     <div class="footer-col">
-      <h4>COMPANY</h4>
-      <a href="#process">Our Process</a>
-      <a href="#trust">Compliance</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <h4>WORK WITH US</h4>
+      <a href="#process">How We Work</a>
+      <a href="#stage">Your School</a>
+      <a href="#ways">Ways to Work</a>
+      <a href="#faq">Questions</a>
     </div>
     <div class="footer-col">
-      <h4>LEGAL</h4>
-      <a href="#">Credit Guide</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Complaints (AFCA)</a>
-      <a href="#">Target Market Determinations</a>
+      <h4>CONTACT</h4>
+      <a href="mailto:hello@heretolearn.example">hello@heretolearn.example</a>
+      <a href="tel:+00000000000">+00 000 000 0000</a>
+      <a href="#contact">Send a Message</a>
     </div>
   </div>
   <div class="footer-base">
-    <span>&#169; 2026 MERIDIAN LENDING CO. PTY LTD / ACL 000000 / ABN 00 000 000 000</span>
-    <span>DRG. ML-2026-001 / REV. C</span>
+    <span>&#169; 2026 HERE TO LEARN CONSULTANTS</span>
+    <span>SUPPORTING SCHOOLS ACROSS ASIA</span>
   </div>
 </footer>
 
