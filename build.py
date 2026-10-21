@@ -9,15 +9,17 @@ lines of ---, for example:
 
 Inside a page, these tokens are expanded:
 
-    [[header]] [[footer]]               shared partials from src/partials/
+    [[header]] [[footer]] [[cta]]       shared partials from src/partials/
     [[img SLUG]]                        responsive <picture> from images/
     [[img SLUG eager sizes="50vw" class="x" alt="..."]]
 
 Run:  python build.py
-Output is written to the project root, one .html file per page.
+Output is written to the project root, one .html file per page, plus
+sitemap.xml and robots.txt.
 """
 import json
 import re
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -35,6 +37,7 @@ SIZES = {
 }
 TOKEN = re.compile(r"\[\[(\w+)([^\]]*)\]\]")
 ATTR = re.compile(r'(\w+)(?:="([^"]*)")?')
+NL = "\n"
 
 
 def widths(slug, ext):
@@ -100,21 +103,69 @@ def expand(text, page):
     return TOKEN.sub(sub, text)
 
 
+HREF = re.compile(r'href="([a-z0-9-]+)\.html(#[^"]*)?"')
+
+
+def deploy_links(html):
+    """Cloudflare Pages 308-redirects /page.html to /page and /index.html to /,
+    so deployed pages link to the final URLs directly."""
+    def sub(m):
+        name, anchor = m.group(1), m.group(2) or ""
+        return f'href="{"./" if name == "index" else name}{anchor}"'
+    return HREF.sub(sub, html)
+
+
+def preview_links(html):
+    """Double-click preview copy in _preview/: assets resolve from the project
+    root through <base>, page links stay on the preview copies."""
+    html = html.replace("<head>" + NL, "<head>" + NL + '<base href="../">' + NL, 1)
+    return HREF.sub(lambda m: f'href="_preview/{m.group(1)}.html{m.group(2) or ""}"', html)
+
+
 def build():
+    urls = []
+    preview = ROOT / "_preview"
+    preview.mkdir(exist_ok=True)
     for src in sorted((SRC / "pages").glob("*.html")):
         raw = src.read_text(encoding="utf-8")
-        _, front, body = raw.split("---\n", 2)
+        _, front, body = raw.split("---" + NL, 2)
         page = json.loads(front)
         page["slug"] = src.stem
         page["site"] = SITE
         page["canonical"] = "" if src.stem == "index" else src.stem
         page["preload"] = preload(page["hero"]) if page.get("hero") else ""
         html = expand(body, page)
-        # mark the current nav item
-        if page.get("nav"):
-            html = html.replace(f'data-nav="{page["nav"]}"', f'data-nav="{page["nav"]}" aria-current="page"')
-        (ROOT / src.name).write_text(html, encoding="utf-8")
+        if src.stem == "404":
+            # served at any missing path, so resolve every relative URL from the root
+            extra = '<base href="/">' + NL + '<meta name="robots" content="noindex">' + NL
+            html = html.replace("<head>" + NL, "<head>" + NL + extra, 1)
+        # mark the current nav item(s)
+        navs = page.get("nav") or []
+        for nav in ([navs] if isinstance(navs, str) else navs):
+            if nav:
+                html = html.replace(f'data-nav="{nav}"', f'data-nav="{nav}" aria-current="page"')
+        if src.stem != "404":
+            (preview / src.name).write_text(preview_links(html), encoding="utf-8")
+        (ROOT / src.name).write_text(deploy_links(html), encoding="utf-8")
+        if src.stem != "404":
+            urls.append(page["canonical"])
         print("built", src.name)
+    write_sitemap(urls)
+
+
+def write_sitemap(urls):
+    today = date.today().isoformat()
+    order = sorted(urls, key=lambda u: (u != "", u))
+    rows = "".join(f"  <url><loc>{SITE}/{u}</loc><lastmod>{today}</lastmod></url>{NL}" for u in order)
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>' + NL
+        + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + NL
+        + rows + "</urlset>" + NL,
+        encoding="utf-8")
+    (ROOT / "robots.txt").write_text(
+        "User-agent: *" + NL + "Allow: /" + NL + NL + f"Sitemap: {SITE}/sitemap.xml" + NL,
+        encoding="utf-8")
+    print("wrote sitemap.xml with", len(order), "urls")
 
 
 if __name__ == "__main__":

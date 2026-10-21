@@ -12,6 +12,7 @@ Content now comes from the Wix site (gazzanine.wixsite.com/here-to-learn). Nothi
 ## Please confirm
 6. **Thai emblem in the logo strip.** It looks like the Ministry of Education seal. Which organisation should it be credited to?
 7. **Testimonial attribution.** The Wix homepage credits "This was a fresh and new approach..." to Steven, ESL Teacher. The testimonials page credits it to Joe, Primary Coordinator, UK, and gives Steven a different quote. The new site follows the testimonials page.
-8. **Jettana's university.** Written "King Mongut's" on Wix. The usual spelling is King Mongkut's University of Technology. OK to correct?
+8. **Spelling corrections applied.** "King Mongut's" is now King Mongkut's University of Technology (Jettana), and "Sunderland University" is now the University of Sunderland (Anthony). Confirm both.
 9. **Blog title typo.** "What is takes to set up a new school" corrected to "What it takes".
-10. **Mindfulness post image.** The Wix image is a 236px clip-art graphic. The blog card uses the river pebbles photo instead.
+10. **Two Wix blog posts are Lorem Ipsum.** "Leveraging Mindfulness as a School Leader" and "Collecting the student at the beginning of the day" contain only placeholder text, so they are not on the new site. The blog has the three real posts. Send the real articles if they exist.
+11. **Patience post image.** The Wix seedling photo is used on the homepage Growth panel, so the post uses the wooden peg dolls photo to avoid repeating an image on one page.
