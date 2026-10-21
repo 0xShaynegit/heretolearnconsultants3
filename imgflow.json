@@ -1,0 +1,74 @@
+{
+  "SITE_PREFIX": "heretolearnconsultants-here-to-learn-",
+  "SOURCE_DIRS": [
+    ".md/imgflow/raw",
+    ".md/imgflow/logo-src",
+    ".md/imgflow/raw2"
+  ],
+  "OUTPUT_DIR": "images",
+  "WORK_DIR": ".md/imgflow",
+  "URL_PREFIX": "images/",
+  "SKIP_NAME_REGEX": "^(thum|prev-|here-to-learn-img_849f4d|here-to-learn-img_e2e0d1)",
+  "SIZE_CLASSES": {
+    "hero": {
+      "widths": [
+        1920,
+        1280,
+        768
+      ],
+      "max_kb": 300,
+      "min_kb": 80
+    },
+    "band": {
+      "widths": [
+        1600,
+        800
+      ],
+      "max_kb": 200,
+      "min_kb": 80
+    },
+    "product": {
+      "widths": [
+        800,
+        400
+      ],
+      "max_kb": 150,
+      "min_kb": 0
+    },
+    "portrait": {
+      "widths": [
+        720,
+        360
+      ],
+      "max_kb": 120,
+      "min_kb": 0
+    },
+    "small": {
+      "widths": [
+        600
+      ],
+      "max_kb": 100,
+      "min_kb": 0
+    },
+    "logo": {
+      "widths": [
+        512,
+        192
+      ],
+      "max_kb": 60,
+      "min_kb": 0
+    }
+  },
+  "SIZES_ATTR": {
+    "hero": "100vw",
+    "band": "(max-width: 900px) 100vw, 50vw",
+    "product": "(max-width: 700px) 100vw, 400px",
+    "portrait": "(max-width: 600px) 50vw, 300px",
+    "small": "(max-width: 700px) 100vw, 600px",
+    "logo": "192px"
+  },
+  "THEME_COLOR": "#10241A",
+  "ICON_BG": "#F4F2EC",
+  "SITE_NAME": "Here to Learn Consultants",
+  "SITE_SHORT_NAME": "Here to Learn"
+}
