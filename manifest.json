@@ -1,0 +1,14 @@
+{
+  "title": "Industrial (High-End)",
+  "stack": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "status": "not-used",
+  "baseTemplate": null,
+  "features": [],
+  "audience": null,
+  "dependencies": [],
+  "notes": "Kit-catalogue high-end sample. Componentized industrial-style build."
+}
