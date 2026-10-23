@@ -1532,3 +1532,9 @@ main { position: relative; z-index: 2; }
 }
 .tri-top, .tri-bottom { background: none; padding: 0; }
 .tri .tri-num, .tri .tri-link { color: var(--sun); }
+
+/* phones: text spans the full width, so the wash must not fade to the right */
+@media (max-width: 860px) {
+  .page-hero::before { background: color-mix(in srgb, var(--paper) 74%, transparent); }
+  .quote-band::before { background: color-mix(in srgb, var(--paper) 74%, transparent); }
+}
