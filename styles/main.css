@@ -66,24 +66,9 @@
   --font-display: "Archivo", "Arial Black", sans-serif;
   --font-body: "Newsreader", Georgia, serif;
   --gutter: clamp(20px, 5vw, 72px);
+  color-scheme: light;
   --header-h: 80px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0B1611;
-    --surface: #12211A;
-    --surface-2: #182A21;
-    --ink: #EEF0E8;
-    --ink-2: #C6CFC8;
-    --muted: #9DAEA2;
-    --line: rgba(238, 240, 232, 0.13);
-    --accent: #8DB85A;
-    --sun-text: #E0A526;
-    --band: #15291F;
-    --header-bg: rgba(11, 22, 17, 0.94);
-  }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1024,14 +1009,6 @@ main { position: relative; z-index: 2; }
   .post-card:hover h3 { color: var(--accent); }
   .footer-col a:hover { color: var(--on-dark); transform: translateX(6px); }
   .footer-legal a:hover { color: var(--on-dark); }
-}
-
-@media (prefers-color-scheme: dark) {
-  .ex-tab.is-active { background: var(--canopy); }
-}
-
-@media (prefers-color-scheme: dark) and (hover: hover) and (pointer: fine) {
-  .btn-sun:hover { background: var(--on-dark); border-color: var(--on-dark); color: var(--forest-900); }
 }
 
 /* ==========================================================
