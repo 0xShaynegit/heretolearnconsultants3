@@ -1445,3 +1445,74 @@ main { position: relative; z-index: 2; }
   .bio-photo { position: static; max-width: 320px; }
   .detail-list, .related { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* ==========================================================
+   LIGHT ZONES: every former dark band now sits on the themed
+   paper ground. Zone-local tokens re-point the on-dark colours
+   to ink, so the rules above keep working unchanged.
+   ========================================================== */
+.hero, .page-hero, .section-dark, .triptych, .tri, .quote-band, .cta-band,
+.site-footer, .related a, .channel--main {
+  --on-dark: var(--ink);
+  --on-dark-2: var(--ink-2);
+  --on-dark-muted: var(--muted);
+  --line-dark: var(--line);
+  --wash: color-mix(in srgb, var(--paper) var(--wash-a, 90%), transparent);
+}
+.hero, .page-hero--plain, .triptych, .quote-band { background: var(--paper); }
+.section-dark, .cta-band, .site-footer, .channel--main { background: var(--surface-2); }
+.channel--main { border-color: var(--line); }
+.hero-title { text-shadow: none; }
+
+.hero::before {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 94%, transparent) 0%, color-mix(in srgb, var(--paper) 84%, transparent) 42%, color-mix(in srgb, var(--paper) 45%, transparent) 70%, color-mix(in srgb, var(--paper) 10%, transparent) 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--paper) 85%, transparent) 0%, transparent 40%);
+}
+.page-hero::before {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 93%, transparent) 0%, color-mix(in srgb, var(--paper) 74%, transparent) 45%, color-mix(in srgb, var(--paper) 25%, transparent) 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--paper) 80%, transparent) 0%, transparent 50%);
+}
+.page-hero--plain {
+  background:
+    radial-gradient(ellipse 55% 90% at 92% 0%, rgba(105, 146, 58, 0.22), transparent 60%),
+    var(--surface-2);
+}
+.quote-band::before {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--paper) 95%, transparent) 0%, color-mix(in srgb, var(--paper) 82%, transparent) 50%, color-mix(in srgb, var(--paper) 40%, transparent) 100%);
+}
+.tri::before {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 78%, transparent) 0%, color-mix(in srgb, var(--paper) 15%, transparent) 38%, color-mix(in srgb, var(--paper) 55%, transparent) 62%, color-mix(in srgb, var(--paper) 94%, transparent) 100%);
+}
+.related a::before {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--paper) 95%, transparent) 0%, color-mix(in srgb, var(--paper) 35%, transparent) 70%);
+}
+.hero-rail { background: color-mix(in srgb, var(--surface) 88%, transparent); }
+.cta-band {
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 10%, rgba(105, 146, 58, 0.2), transparent 60%),
+    var(--surface-2);
+}
+
+/* sun-coloured text is unreadable on paper: use the dark amber */
+.kicker, .accent-sun, .section-dark .section-index, .cta-band .section-index,
+.section-dark .section-link, .tri-num, .tri-link, .hero-rail span, .hero-rail i,
+.footer-col h2, .crumbs, .related span, .impact-org, .channel--main span,
+.channel--main i, .quote-figure blockquote p::before, .quote-figure blockquote p::after { color: var(--sun-text); }
+.impact-tag { color: var(--accent); }
+
+/* buttons that sat on dark */
+.hero .btn-line, .section-dark .btn-line, .cta-band .btn-line { border-color: var(--ink); color: var(--ink); }
+.btn-solid { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.to-top { background: var(--surface-2); border-color: var(--line); color: var(--accent); }
+.ex-tab.is-active { background: var(--ink); color: var(--paper); }
+.ex-tab.is-active em { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+.chip.is-active { color: #10241A; }
+
+@media (hover: hover) and (pointer: fine) {
+  .hero .btn-sun:hover, .cta-band .btn-sun:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .hero .btn-line:hover, .section-dark .btn-line:hover, .cta-band .btn-line:hover { background: var(--ink); color: var(--paper); }
+  .hero-rail a:hover { background: var(--surface); }
+  .channel--main:hover { background: var(--surface); border-color: var(--line); }
+}
