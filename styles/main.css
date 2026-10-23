@@ -1501,3 +1501,34 @@ main { position: relative; z-index: 2; }
 .tri-bottom { padding-top: clamp(20px, 2vw, 30px); }
 
 .hero .kicker, .page-hero .kicker { color: var(--ink); }
+
+/* inner-page photo bands: photos at strength, lighter washes, text stays readable */
+.page-hero::before {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 80%, transparent) 0%, color-mix(in srgb, var(--paper) 60%, transparent) 45%, color-mix(in srgb, var(--paper) 15%, transparent) 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--paper) 55%, transparent) 0%, transparent 50%);
+}
+.quote-band::before {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--paper) 82%, transparent) 0%, color-mix(in srgb, var(--paper) 62%, transparent) 50%, color-mix(in srgb, var(--paper) 20%, transparent) 100%);
+}
+.related a::before {
+  background: linear-gradient(0deg, color-mix(in srgb, var(--paper) 94%, transparent) 0%, color-mix(in srgb, var(--paper) 94%, transparent) 56%, transparent 57%);
+}
+
+.quote-figure figcaption span { color: var(--ink); }
+
+/* triptych: back to dark photo overlay with light text */
+.triptych { background: var(--forest-900); }
+.tri {
+  --on-dark: #EEF0E8;
+  --on-dark-2: #B9C6BC;
+  --on-dark-muted: #93A398;
+  --line-dark: rgba(238, 240, 232, 0.16);
+  padding: clamp(28px, 3vw, 48px);
+}
+.tri::before {
+  display: block;
+  background: linear-gradient(180deg, rgba(16, 36, 26, 0.72) 0%, rgba(16, 36, 26, 0.2) 38%, rgba(16, 36, 26, 0.55) 62%, rgba(16, 36, 26, 0.94) 100%);
+}
+.tri-top, .tri-bottom { background: none; padding: 0; }
+.tri .tri-num, .tri .tri-link { color: var(--sun); }
