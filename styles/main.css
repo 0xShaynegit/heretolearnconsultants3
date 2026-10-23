@@ -1443,8 +1443,8 @@ main { position: relative; z-index: 2; }
 
 .hero::before {
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--paper) 94%, transparent) 0%, color-mix(in srgb, var(--paper) 84%, transparent) 42%, color-mix(in srgb, var(--paper) 45%, transparent) 70%, color-mix(in srgb, var(--paper) 10%, transparent) 100%),
-    linear-gradient(0deg, color-mix(in srgb, var(--paper) 85%, transparent) 0%, transparent 40%);
+    linear-gradient(90deg, color-mix(in srgb, var(--paper) 80%, transparent) 0%, color-mix(in srgb, var(--paper) 62%, transparent) 42%, color-mix(in srgb, var(--paper) 22%, transparent) 70%, transparent 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--paper) 60%, transparent) 0%, transparent 40%);
 }
 .page-hero::before {
   background:
@@ -1493,3 +1493,11 @@ main { position: relative; z-index: 2; }
   .hero-rail a:hover { background: var(--surface); }
   .channel--main:hover { background: var(--surface); border-color: var(--line); }
 }
+
+/* triptych: photos at full strength, text on solid paper panels */
+.tri { padding: 0; }
+.tri::before { display: none; }
+.tri-top, .tri-bottom { background: color-mix(in srgb, var(--paper) 94%, transparent); padding: clamp(24px, 2.6vw, 40px); }
+.tri-bottom { padding-top: clamp(20px, 2vw, 30px); }
+
+.hero .kicker, .page-hero .kicker { color: var(--ink); }
