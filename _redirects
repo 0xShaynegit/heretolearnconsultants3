@@ -1,0 +1,2 @@
+# Removed internal files (2026-11-22): send requests for them home, overriding stale copies
+/docs/*  /  301
